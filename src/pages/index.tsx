@@ -1,117 +1,100 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Button } from "@/components/ui/button";
+import Logo from "../assets/images/logo.svg";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="w-full flex flex-col bg-[#010001] min-h-screen text-white ">
+      <nav className="w-full flex flex-row justify-between items-center  py-8  px-20">
+        <img src="./logo.svg" alt="" width={200} height={200} />
+        <div className="w-fit flex flex-row items-center gap-8 text-lg">
+          <Button
+            className="bg-white text-black hover:bg-gray-400 hover:text-black p-3 rounded-lg font-semibold text-lg"
+            onClick={() => {}}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            Start Building
+          </Button>
+        </div>
+      </nav>
+      <div className="w-full flex flex-row justify-between pt-10 pb-20 px-20">
+        <div className="w-[50%] flex flex-col gap-5">
+          <h2 className="font-bold text-[60px] gradient-text ">
+            BOLT - Empowering Blockchain Game Development
+          </h2>
+          <h3 className="text-[20px]">
+            A Framework for Permissionless,
+            <br /> Composable, and Everlasting Onchain Games
+          </h3>
+          <Button className="bg-white py-[30px] px-4 w-[40%] text-black hover:bg-gray-400 hover:text-black gradient-border font-semibold text-lg ">
+            Start Building
+          </Button>
+        </div>
+        <img src="./BOLT.png" alt="bolt png" height={10} />
+      </div>
+
+      <h2 className="text-[50px] text-center font-black px-20">
+        {" "}
+        <span className="gradient-text font-black">BOLT</span> Properties
+      </h2>
+      <div className="w-full flex flex-row gap-8 py-20 px-20">
+        <div className="flex flex-col gap-6 items-center">
+          <img src="./Integrate.png" alt="" className="w-20 h-20" />
+          <h3 className="text-2xl font-semibold text-center">
+            Entity Component System (ECS)
+          </h3>
+          <span className="text-base ">
+            BOLT utilizes an ECS pattern for organizing code and data, promoting
+            modularity and extendibility in blockchain game development.
+          </span>
+        </div>
+        <div className="flex flex-col gap-6 items-center">
+          <img src="./Access.png" alt="" className="w-20 h-20" />
+          <h3 className="text-2xl font-semibold text-center">
+            SVM-Compatible Acceleration Layer
+          </h3>
+          <span className="text-base ">
+            Enhance the performance of fully onchain (FOC) games on Solana with
+            an acceleration layer, bringing it on par with traditional
+            multiplayer game servers.
+          </span>
+        </div>
+        <div className="flex flex-col gap-6 items-center">
+          <img src="./Onboard.png" alt="" className="w-20 h-20" />
+          <h3 className="text-2xl font-semibold text-center ">BOLT CLI </h3>
+          <span className="text-base ">
+            An extension of the Anchor framework, BOLT CLI simplifies the
+            development process by providing functionalities for creating world
+            instances, components, and systems.
+          </span>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="w-full flex flex-col gap-10 items-center px-20">
+        <h2 className="text-[60px] text-center font-bold"> Get Started </h2>
+        <div className="w-[60%] flex flex-col gap-4 bg-131417 p-5 rounded-xl border-[1px] border-gray-100">
+          <span className="text-green-700">// Install BOLT CLI</span>
+          <span className="text-[#da66e9]">
+            npm install @magicblock-labs/bolt-cli
+          </span>
+          <span className="text-green-700">// Verify installation</span>
+          <span className="text-[#da66e9]">bolt -h</span>
+          <span className="text-green-700">// Create a new workspace</span>
+          <span className="text-[#da66e9]">bolt init new-workspace-name</span>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="w-full flex flex-col gap-6 items-center pt-20 pb-20  px-20">
+        <h2 className="text-[40px] text-center font-bold">
+          Learn and Buid More
+        </h2>
+        <Button className="bg-white py-[30px] px-4 w-[20%] text-black hover:bg-gray-400 hover:text-black gradient-border font-semibold text-lg ">
+          Visit BOLT Blog
+        </Button>
+      </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="flex flex-col w-full gap-5 bg-[#111315] pt-8 pb-20 px-20 items-center">
+        <img src="./logo.svg" alt="" width={200} height={200} />A quick Website
+        made by Oleanji, not really showing Frontned skills but showing how fast
+        i am, react and a little of my skills
       </div>
     </main>
   );
