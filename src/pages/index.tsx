@@ -19,7 +19,7 @@ export default function Home() {
       <div className="w-full flex flex-row justify-between items-center pt-10 pb-20 px-20">
         <div className="w-[50%] flex flex-col gap-5">
           <h2 className="font-bold text-[60px] gradient-text ">
-            BOLT - Empowering Blockchain Game Development
+            BOLT engine - unstoppable and composable games
           </h2>
           <h3 className="text-[20px]">
             A Framework for Permissionless,
