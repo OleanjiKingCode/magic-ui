@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Logo from "../assets/images/logo.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,15 +7,16 @@ export default function Home() {
       <nav className="w-full flex flex-row justify-between items-center  py-8  px-20">
         <img src="./logo.svg" alt="" width={200} height={200} />
         <div className="w-fit flex flex-row items-center gap-8 text-lg">
-          <Button
-            className="bg-white text-black hover:bg-gray-400 hover:text-black p-3 rounded-lg font-semibold text-lg"
-            onClick={() => {}}
+          <Link
+            href="https://docs.magicblock.gg/"
+            target="_blank"
+            className="bg-white text-black hover:bg-gray-400 hover:text-black px-3 py-2 rounded-lg font-semibold text-lg"
           >
             Start Building
-          </Button>
+          </Link>
         </div>
       </nav>
-      <div className="w-full flex flex-row justify-between pt-10 pb-20 px-20">
+      <div className="w-full flex flex-row justify-between items-center pt-10 pb-20 px-20">
         <div className="w-[50%] flex flex-col gap-5">
           <h2 className="font-bold text-[60px] gradient-text ">
             BOLT - Empowering Blockchain Game Development
@@ -24,11 +25,15 @@ export default function Home() {
             A Framework for Permissionless,
             <br /> Composable, and Everlasting Onchain Games
           </h3>
-          <Button className="bg-white py-[30px] px-4 w-[40%] text-black hover:bg-gray-400 hover:text-black gradient-border font-semibold text-lg ">
+          <Link
+            href="https://docs.magicblock.gg/"
+            target="_blank"
+            className="bg-white py-[20px] px-4 w-[40%] text-black text-center hover:bg-gray-400 hover:text-black gradient-border font-semibold text-lg "
+          >
             Start Building
-          </Button>
+          </Link>
         </div>
-        <img src="./BOLT.png" alt="bolt png" height={10} />
+        <img src="./bolts.png" alt="bolt png" className="w-[50%] h-[50%]" />
       </div>
 
       <h2 className="text-[50px] text-center font-black px-20">
@@ -86,13 +91,17 @@ export default function Home() {
         <h2 className="text-[40px] text-center font-bold">
           Learn and Buid More
         </h2>
-        <Button className="bg-white py-[30px] px-4 w-[20%] text-black hover:bg-gray-400 hover:text-black gradient-border font-semibold text-lg ">
+        <Link
+          href="https://blog.magicblock.gg/bolt-v0.1/"
+          target="_blank"
+          className="bg-white py-[20px] px-4 w-[20%] text-center text-black hover:bg-gray-400 hover:text-black gradient-border font-semibold text-lg "
+        >
           Visit BOLT Blog
-        </Button>
+        </Link>
       </div>
 
       <div className="flex flex-col w-full gap-5 bg-[#111315] pt-8 pb-20 px-20 items-center">
-        <img src="./logo.svg" alt="" width={200} height={200} />A quick Website
+        <img src="./logo.svg" alt="" width={200} height={200} />A quick website
         made by Oleanji, not really showing Frontned skills but showing how fast
         i am, react and a little of my skills
       </div>
