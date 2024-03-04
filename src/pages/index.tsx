@@ -76,13 +76,13 @@ export default function Home() {
       <div className="w-full flex flex-col gap-10 items-center px-20">
         <h2 className="text-[60px] text-center font-bold"> Get Started </h2>
         <div className="w-[60%] flex flex-col gap-4 bg-131417 p-5 rounded-xl border-[1px] border-gray-100">
-          <span className="text-green-700">// Install BOLT CLI</span>
+          <span className="text-green-700">{"//"}Install BOLT CLI</span>
           <span className="text-[#da66e9]">
             npm install @magicblock-labs/bolt-cli
           </span>
-          <span className="text-green-700">// Verify installation</span>
+          <span className="text-green-700">{"//"} Verify installation</span>
           <span className="text-[#da66e9]">bolt -h</span>
-          <span className="text-green-700">// Create a new workspace</span>
+          <span className="text-green-700">{"//"} Create a new workspace</span>
           <span className="text-[#da66e9]">bolt init new-workspace-name</span>
         </div>
       </div>
